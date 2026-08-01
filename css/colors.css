@@ -1,0 +1,477 @@
+/*
+ * Purpose: Site Colors
+ *
+ * Copyright 14ers.inc, 14ers.com
+ */
+
+body {
+	color: var(--text-primary-color);
+	background-color: var(--bg-main-color);
+}
+h1 {
+	color: var(--text-hdr-color);
+}
+h2 {
+	color: var(--text-hdr-color);
+}
+h3 {
+	color: var(--text-hdr-color);
+}
+.pageoverlay {
+	background-color: var(--bg-page-dim-overlay);
+}
+#sfooter {
+	background: linear-gradient(to bottom, var(--bg-footer-color1), var(--bg-footer-color2));
+}
+#breadcrumbwrap a {
+	color: var(--bg-main-color);
+}
+.breadcrumb li a:before,
+ul.breadcrumb li a:before {
+	border-left: 22px solid var(--bg-main-color);
+}
+.breadcrumb li a:after,
+ul.breadcrumb li a:after { 				border-left: 20px solid hsla(34,85%,35%,1);}
+.breadcrumb li:nth-child(1) a { 		background: hsla(34,85%,35%,1);}
+.breadcrumb li:nth-child(2) a {			background: hsla(34,85%,45%,1);}
+.breadcrumb li:nth-child(2) a:after { 	border-left-color: hsla(34,85%,45%,1);}
+.breadcrumb li:nth-child(3) a {			background: hsla(34,85%,55%,1);}
+.breadcrumb li:nth-child(3) a:after { 	border-left-color: hsla(34,85%,55%,1);}
+.breadcrumb li:nth-child(4) a {			background: hsla(34,85%,65%,1);}
+.breadcrumb li:nth-child(4) a:after { 	border-left-color: hsla(34,85%,65%,1);}
+.breadcrumb li:nth-child(5) a {			background: hsla(34,85%,75%,1);}
+.breadcrumb li:nth-child(5) a:after { 	border-left-color: hsla(34,85%,75%,1);}
+.breadcrumb li a:hover { 				background: hsla(34,85%,25%,1);}
+.breadcrumb li a:hover:after {			border-left-color: hsla(34,85%,25%,1) !important;}
+
+#dhtmlpoptip {
+	background-color: transparent;
+}
+
+/* Site-wide links
+---------------------------------------- */
+a:link,
+a:visited,
+a:not([href]),
+button.linkButton,
+div.linkButton,
+span.linkButton,
+div.linkColor,
+span.linkColor,
+i.linkColor {
+	color : var(--text-link-color);
+}
+a:hover,
+a:not([href]):hover,
+button.linkButton:hover,
+div.linkButton:hover,
+span.linkButton:hover {
+	color : var(--text-link-hover-color);
+}
+
+/* Individual Page - Bottom Function Bar
+   used for SAVE buttons, etc.
+---------------------------------------- */
+#bottomFunctionBar {
+	background-color: var(--form-function-bar-color);
+	-webkit-box-shadow: 0 -2px 32px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0 -2px 2px rgba(50, 50, 50, 0.75);
+	box-shadow: 0 -2px 2px rgba(50, 50, 50, 0.75);
+}
+
+
+/* V3 (2021) color scheme
+---------------------------------------- */
+.v3-darkback {
+	color: var(--table-th-text-color);
+	background-color: var(--table-th-bg-color);
+}
+.v3-table {
+	background-color: var(--table-bg-color);
+	border:1px solid var(--table-border-color);
+}
+.v3-table th {
+	background-color: var(--table-th-bg-color);
+	color: var(--table-th-text-color);
+}
+.v3-table th a:link,
+.v3-table th a:not([href]),
+.v3-table th a:visited {
+	color : var(--text-link-light-color);
+}
+.v3-table th a:hover {
+	color : var(--text-link-hover-color);
+}
+/* In ../sass/sortable-theme-light.sass */
+table[data-sortable] th[data-sorted="true"] {
+	background: var(--bg-object-hover-color);
+}
+
+
+/* MAIN 
+---------------------------------------- */
+a.textHighlight,
+span.textHighlight {
+	background-color: var(--text-highlight-color);
+}
+.pagination span strong {
+	color: var(--paging-current-text-color);
+	background-color: var(--paging-current-bg-color);
+	border: 1px solid var(--paging-current-bdr-color);
+}
+.pagination span a,
+.pagination span a:link,
+.pagination span a:visited,
+.pagination span a:active {
+	color: var(--paging-text-color);
+	background-color: var(--paging-bg-color);
+	border: 1px solid var(--paging-border-color);
+}
+.pagination span a:hover {
+	color: var(--paging-hover-text-color);
+	background-color: var(--paging-hover-bg-color);
+	border: 1px solid var(--paging-hover-bdr-color);
+}
+.errormsg,
+.colorRed {
+	color: var(--text-error-color) !important;
+}
+.successmsg {
+	color: var(--text-success-color) !important;
+}
+.color14ers  {
+	color: var(--peak-14er-color);
+}
+.color13ers {
+	color: var(--peak-13er-color);
+}
+.class1,
+.class2,
+.class3,
+.class4,
+.class5 {
+	color:#FFF;
+}
+@media print {
+	.class1,
+	.class2,
+	.class3,
+	.class4,
+	.class5 {
+		color:#000;
+	}
+}
+.class1 { background-color: var(--class1-color);}
+.class2 { background-color: var(--class2-color);}
+.class3 { background-color: var(--class3-color);}
+.class4 { background-color: var(--class4-color);}
+.class5 { background-color: var(--class5-color);}
+.buttonf,
+.buttonfs {
+	color: var(--button-text-color) !important;
+	text-shadow: var(--button-text-shadow-color);
+	-webkit-box-shadow: var(--button-shadow-color);
+	-moz-box-shadow: var(--button-shadow-color);
+	box-shadow: var(--button-shadow-color);
+}
+a.buttonf:visited {
+	color: var(--button-text-color) !important;
+}
+.orangef {
+	color: var(--button-text-color);
+	border: solid 1px var(--button-border-color);
+	background-color: var(--button-bg1-color);
+}
+.orangef:hover,
+.orangef:active {
+	background-color: var(--button-hover1-color);
+}
+a.orangef:link,
+a.orangef:hover,
+a.orangef:active {
+	color: var(--button-text-color) !important;
+}
+span.featuredPhotoThumb:hover,
+div.peakGroupedPhotosWrap span:hover {
+	-webkit-box-shadow: 1px 1px 3px 3px #333;
+	-moz-box-shadow: 1px 1px 3px 3px #333;
+	box-shadow: 1px 1px 3px 3px #333;
+}
+span.featuredPhoto {
+	border:3px solid var(--photo-featured-bdr-color);
+	background-color: var(--photo-featured-bg-color);
+	-webkit-box-shadow: 0 0 4px 4px #333;
+	-moz-box-shadow: 0 0 4px 4px #333;
+	box-shadow: 0 0 4px 4px #333;
+}
+.featuredPhoto img,
+img.featuredPhoto {
+	background-color:#FFF;
+}
+.featuredPhotoThumb img,
+img.featuredPhotoThumb {
+	border: 1px solid darkgray;
+	background-color:#FFF;
+}
+div.formErrors {
+	width:100%;
+	margin:5px;
+	color:var(--text-error-color);
+}
+.groupCard {
+	background-color: var(--card-bg-color);
+	border: 1px solid var(--card-border-color);
+	box-shadow: rgba(0, 0, 0, 0.14) 0 4px 5px 0, rgba(0, 0, 0, 0.12) 0 1px 10px 0, rgba(0, 0, 0, 0.2) 0 2px 4px -1px;
+}
+.groupCard h2 {
+	color: var(--card-hdr-color);
+}
+ul.bullet1 li:before {
+	color: var(--bullet1-color);
+}
+ul.bullet2 li:before {
+	color: var(--bullet2-color);
+}
+.fa-li.fa.fa-circle {
+	color: var(--bullet1-color);
+}
+
+
+/* REACTIONS
+---------------------------------------- */
+.likeColor {
+	color: var(--like-bg-color);
+}
+div.countBoxLike {
+	color: var(--like-text-color);
+	background-color: var(--like-bg-color);
+}
+span.likecount {
+	color: var(--like-text-color);
+}
+span.likecount {
+	background-color: var(--like-bg-color);
+}
+div#likedata :active {
+	background-color: var(--text-highlight-color);
+}
+div.likearea:hover {
+	background-color: var(--like-bg-hover-color);
+}
+
+
+/* TABLES 
+---------------------------------------- */
+.rowhover tr:hover,
+tr.rowhover:hover,
+div.cardhover:hover {
+	background-color: var(--bg-object-hover-color) !important;
+}
+.cardhover:hover {
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.rownohover tr:hover,
+table.rowhover tr.rownohover:hover {
+	background-color: transparent !important;
+}
+table.alternaterowcolors1 tr:nth-child(odd) {
+	background-color: var(--table-row-bg-odd-color);
+}
+table.alternaterowcolors1 tr:nth-child(even) {
+	background-color: var(--table-row-bg-even-color);
+}
+tr.rowcolorentrydeleted {
+	background-color: var(--table-row-bg-x-color) !important;
+}
+
+
+/* Optional: Add side borders to the first and last cells to 'close' the box */
+table.rowhover tr:hover td:first-child {
+    transition: box-shadow 0.2s ease;
+    box-shadow: inset 4px 0 0 0 var(--text-link-light-color);
+}
+
+/* MENUS
+---------------------------------------- */
+
+
+
+/* USED IN POPTIP.JS
+---------------------------------------- */
+.poptip {
+	background-color: var(--poptip-bg-color);
+	border:1px solid var(--poptip-border-color);
+}
+.poptip h3#poptip-title {
+	background-color: transparent;
+	border:0;
+	color: var(--poptip-title-color);
+}
+
+
+/* LOGIN.CSS 
+---------------------------------------- */
+#siteloginpod {
+	background: var(--form-bg-color);
+	border:1px solid var(--form-border-color);
+}
+#siteloginpod input.textinput {
+	border:1px solid var(--form-field-border-color);
+}
+
+
+/* GOOGLE MAP Specific
+---------------------------------------- */
+div.gmap-infowindow-description {
+	color: var(--text-primary-color);
+}
+.gmap-infowindow-subheader {
+	color: var(--poptip-title-color);
+}
+
+
+/* Popup box attributes
+-------------------------------------- */
+.poptip {
+	-webkit-box-shadow: 4px 4px 8px -4px var(--poptip-shadow-color);
+	-moz-box-shadow: 4px 4px 8px -4px var(--poptip-shadow-color);
+	box-shadow: 4px 4px 8px -4px var(--poptip-shadow-color);
+}
+
+
+/* SELECT2
+---------------------------------------- */
+.select2-container--default .select2-results__group {
+	background-color: var(--box-bg-color);
+}
+
+
+/* Form Panels/Boxes
+---------------------------------------- */
+.formPanelContainer {
+	background-color: var(--form-bg-color);
+	border: 1px solid var(--form-border-color);
+}
+select, input.search {
+	border: 1px solid var(--form-field-border-color);
+}
+div.formPanelField input[type=text],
+div.formPanelField select,
+div.formPanelField textarea {
+	border: 1px solid var(--form-field-border-color);
+}
+.formInfoText {
+	color: var(--form-field-info-color) !important;
+}
+.statsBox,
+.filterBox,
+.riskBox,
+.discussionForm {
+	background-color: var(--box-bg-color);
+	border: 1px solid var(--box-border-color);
+}
+.tedit button,
+.tedit div.bbcode-color select,
+.tedit div.bbcode-font select {
+	background-color:#cadceb;
+	border:1px solid gray;
+}
+.tedit button:hover,
+.tedit div.bbcode-color select:hover,
+.tedit div.bbcode-font select:hover {
+	background-color:#ddeffe;
+}
+
+/* FONT AWESOME Overrides
+---------------------------------------- */
+.fa-check {					color:var(--icon-checkmark-color) !important;}
+.fa-person-skiing {			color: var(--icon-skiing-color) !important;}
+.fa-xmark {					color: var(--icon-delete-color);}
+.fa-wrench {				color: var(--icon-wrench-color);}
+.fa-star {					color: var(--icon-star-color);}
+.fa-snowflake {				color: var(--icon-snowflake-color); !important;}
+.fa-hiking {				color: var(--icon-hiking-color);}
+.fa-dice-three {			color: var(--icon-dice-color);}
+.fa-panorama {				color: var(--icon-panorama-color);}
+.fa-user-group {			color: var(--icon-user-color);}
+.fa-file-alt {				color: var(--icon-file-color);}
+.fa-bookmark {				color: var(--text-link-color);}
+.fa-bookmark:hover {		color: var(--text-link-hover-color);}
+.fa-info-circle {			color: var(--icon-info-color);}
+.fa-map {					color: var(--icon-map-color);}
+.fa-folder-open {			color: var(--icon-folder-color);}
+.fa-pen-to-square {			color: var(--icon-edit-color);}
+.fa-plus {					color: var(--icon-add-color);}
+.fa-trash-can {				color: var(--icon-delete-color);}
+.fa-circle-exclamation {	color: var(--icon-exclaim-color);}
+.fa-gear {					color: var(--icon-gear-color);}
+.fa-upload {				color: var(--icon-upload-color);}
+.fa-download {				color: var(--icon-download-color);}
+.fa-mobile-screen {			color: var(--icon-mobile-color);}
+.fa-globe {					color: var(--icon-globe-color);}
+.fa-thumbs-up.reaction {	color: var(--like-bg-color);}
+.fa-cloud-sun {				color: var(--icon-weather-color);}
+.fa-dollar-sign {			color: var(--icon-dollar-color);}
+.fa-triangle-exclamation {	color: var(--icon-warn_exclaim-color);}
+.fa-copyright {				color: var(--icon-copyright-color);}
+.fa-cookie {				color: var(--icon-cookies-color);}
+.fa-shield-halved {			color: var(--icon-privacy-color);}
+
+.ageRed {			color: var(--age-1-color);}
+.ageYellow {		color: var(--age-2-color);}
+.ageBlue {			color: var(--age-3-color);}
+.ageBlank {			color:transparent;}
+.ageOpacity {		opacity: 0.3;}
+
+.colorActive {		color: var(--active-color)}
+.colorInactive {	color: var(--inactive-color)}
+
+/* SITE HEADER
+---------------------------------------- */
+/* Site header color are in their own file so it can also be used in the phpBB forum.
+
+
+/* USER PROFILE MENU 
+---------------------------------------- */
+.withText {
+	color: var(--text-lightondark-color);
+}
+#siteheader-login a.newLoginLink:hover {
+	color: var(--text-link-light-color);
+}
+ul#userProfileMenu {
+	border:1px solid var(--menu-border-color);
+	background-color: var(--menu-bg-color);
+	-webkit-box-shadow: 0 5px 14px 0 var(--menu-shadow-color) !important;
+	-moz-box-shadow:0 5px 14px 0 var(--menu-shadow-color) !important;
+	box-shadow: 0 5px 14px 0 var(--menu-shadow-color) !important;
+}
+ul#userProfileMenu li.userProfileOption:hover{
+	background-color: var(--menu-item-hover-bg-color);
+}
+ul#userProfileMenu li.userProfileMenuSep {
+	border-bottom:1px solid var(--menu-separator-color);
+}
+
+.stampFull {
+	background-color: var(--trip-full-stamp-color);
+	color: var(--text-primary-color);
+}
+.stampMini {
+	background-color: var(--trip-mini-stamp-color);
+	color: var(--text-lightondark-color);
+}
+.stampExternal {
+	background-color: var(--trip-external-stamp-color);
+	color: var(--text-lightondark-color);
+}
+.stampPrivate {
+	background-color: var(--trip-private-stamp-color);
+	color: var(--text-primary-color);
+}
+
+/* Misc */
+.fas[data-count]:after {
+	color: white;
+	background: rgba(255,0,0,.75);
+}

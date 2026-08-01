@@ -1,0 +1,79 @@
+/*
+ * Purpose: Site footer CSS
+ *
+ * Copyright 14ers.inc, 14ers.com
+ */
+
+
+/* Site FOOTER
+---------------------------------------- */
+#sfooter {
+	clear:both;
+	width:100%;
+	text-align: left;
+	margin-top:40px;
+	padding: 0 0 10px 0;
+	position: static;
+	user-select:none;
+}
+#sfooter h3 {
+	margin-right:inherit;
+	font-weight:normal;
+	font-family:var(--font-main-family);
+	font-size: 1.25em;
+	border-bottom: none;
+	text-transform: none;
+	text-align:center;
+}
+#sfooter ul {
+	list-style-type: none;
+	margin-left: 0;
+}
+#sfooter ul li {
+	padding-bottom: 10px;
+	line-height: inherit;
+	height: auto;
+}
+#sfooter .copyright {
+	position: static;
+	text-align: center;
+	padding-top:10px;
+}
+#sfooter .footer-section ul {
+
+}
+#sfooter .footer-section ul img {
+	vertical-align: middle;
+}
+#sfooter .footer-section {
+	text-align:center;
+	width: 100%;
+	float: left;
+}
+#sfooter .footer-row {
+	width:100%;
+	max-width: none;
+	display:inline-block;
+	margin-right: auto;
+	margin-left: auto;
+}
+#sfooter .footer-section ul.social-list {
+	font-size:2em !important;
+}
+@media screen and (min-width: 600px) {
+	#sfooter .footer-section {
+		width: 33%;
+		float: left;
+	}
+}
+@media screen and (max-width: 600px) {
+	#sfooter {
+		text-align:center;
+	}
+	#sfooter h3 {
+		display: none;
+	}
+	#sfooter .footer-section {
+		margin-top:15px;
+	}
+}

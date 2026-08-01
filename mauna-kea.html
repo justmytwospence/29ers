@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=yes">
+<title>Mauna Kea | 29ers.com</title>
+<link rel="stylesheet" type="text/css" href="css/variables.css">
+<link rel="stylesheet" type="text/css" href="css/colors.css">
+<link rel="stylesheet" type="text/css" href="css/colorssiteheader.css">
+<link rel="stylesheet" type="text/css" href="css/site.css">
+<link rel="stylesheet" type="text/css" href="css/siteheader.css">
+<link rel="stylesheet" type="text/css" href="css/sitefooter.css">
+<link rel="stylesheet" type="text/css" href="css/peak.css">
+<link rel="stylesheet" type="text/css" href="css/tabs.css">
+<link rel="stylesheet" type="text/css" href="css/forecast.css">
+<link rel="stylesheet" type="text/css" href="css/29ers.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="icon" href="images/site_logo.svg" type="image/svg+xml">
+</head>
+<body class="MainText1">
+
+<div id="pageoverlay" class="pageoverlay"></div>
+<div id="siteheader">
+  <div id="siteheader-logo">
+   <a target="_top" tabindex="-1" href="index.html" title="29ers.com Home"><img src="images/site_logo.svg" alt="logo" width="130" height="50"></a>
+  </div>
+
+  <div id="hamburger" class="hamburger-menu" onclick="menuExpand();return false">
+   <span></span><span></span><span></span>
+  </div>
+
+</div>
+
+  <div id="siteheader-login" tabindex="0">
+   <a href="login.html" class="newLoginLink" title="Log In">Log In&nbsp;<span class="fas fa-sign-in-alt"></span></a>
+  </div>
+
+<div id="siteheader-menuwrap">
+<ul><li class="menu_topitem"><a href="peaks.html">Explore Peaks</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="peaks.html">All Peaks</a></li><li><a href="olympus-mons.html">Olympus Mons</a></li><li><a href="rheasilvia.html">Rheasilvia</a></li><li><a href="mount-everest.html">Mount Everest</a></li><li><a href="about.html">What are 29ers?</a></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="routes.html">Routes &amp; Planning</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Routes</span></li><li><a href="routes.html">29er Routes</a></li><li><a href="route-selector.html">Easiest 29ers</a></li><li><a href="route-selector.html">Routes by Difficulty</a></li><li><a href="route-selector.html">Routes by Risk Factor</a></li><li><a href="route-selector.html">Route Selection Tool</a></li><li><a href="gpx.html">GPX Library</a></li><li><a href="reception.html">Relay-Sat Reception</a></li><li><a href="climb-times.html">User Climb Times</a></li></ul></div><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Getting Started</span></li><li><a href="climbing.html">Climbing 29ers</a></li><li><a href="faq.html">29er FAQ</a></li><li><a href="safety.html">Mountaineering Safety</a></li><li><a href="difficulty.html">Difficulty Rating System</a></li><li><a href="gear.html">Spacesuit &amp; Gear List</a></li><li><a href="aphelion.html">Climbing 29ers in Aphelion</a></li><li class="external-icon"><a href="https://mars.nasa.gov/">NASA Mars Exploration <i class="fas fa-external-link-alt"></i></a></li></ul></div><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Weather</span></li><li><a href="weather.html">Summit Forecasts</a></li><li class="external-icon"><a href="https://mars.nasa.gov/weather/">InSight/MEDA Weather <i class="fas fa-external-link-alt"></i></a></li><li><a href="weather.html#dust">Dust Storm Tracker</a></li><li><a href="weather.html#conjunction">Solar Conjunction</a></li></ul></div><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Mission App</span></li><li><div class="menu_promo_block"><a href="app.html"><img src="images/peaks/olympus-mons.jpg" style="width: 100% !important; height: auto !important; margin-bottom: 8px; border-radius:6px;"></a></div></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="conditions.html">Conditions &amp; Reports</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="conditions.html">Peak Conditions</a></li><li><a href="conditions.html#post">Post a Condition Update</a></li><li class="sep nomobile"></li><li><a href="landing-sites.html">Landing Sites &amp; Status</a></li><li><a href="landing-sites.html#post">Post a Status Update</a></li><li class="sep nomobile"></li><li><a href="trip-reports.html">Trip Reports</a></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="forum.html">Community</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="forum.html">Forum</a></li><li class="sep nomobile"></li><li><a href="checklists.html">User Checklists</a></li><li><a href="checklists.html#stats">Checklist Statistics</a></li><li class="sep nomobile"></li><li class="external-icon"><a href="https://spencerboucher.com" rel="noopener">Spencer Boucher <i class="fas fa-external-link-alt"></i></a></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="about.html">More</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="about.html">About 29ers.com</a></li><li><a href="support.html">Support</a></li><li><a href="store.html">29ers.com Store</a></li><li class="sep nomobile"></li><li><a href="contact.html">Contact Site Admin</a></li><li><a href="search.html">Search the Site</a></li><li class="sep nomobile"></li><li><a href="about.html">What are 29ers?</a></li></ul></div></div></li></ul></li></ul>
+</div>
+
+<div id="wrap">
+
+<div class="breadcrumb" id="breadcrumbwrap">
+  <ul class="breadcrumb">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="peaks.html">Tallest Mountains</a></li>
+   <li><a>Mauna Kea</a></li>
+  </ul>
+</div>
+
+<a id="top" accesskey="t"></a>
+<div style="width:100%;clear:both;"></div>
+
+<div id="wrap_inner">
+<h1>Mauna Kea <span style="background:#f6a828;color:#fff;font-size:0.5em;font-weight:bold;padding:3px 8px;border-radius:9px;vertical-align:middle;">29er</span></h1>
+<div class="overviewText" style="margin-top:0;">Mauna Kea is a dormant Hawaiian shield volcano whose summit reaches 13,803 ft above sea level &mdash; but whose base lies deep on the Pacific seafloor. Measured base-to-peak it rises about 10.2 km (33,500 ft), making it the tallest mountain on Earth by total height, even though only its top third pokes above the waves.
+<span id="moreText" style="display:none;"><br><br>Its dry, high, stable summit hosts one of the world's premier collections of astronomical observatories. Mauna Kea last erupted roughly 4,500&ndash;6,000 years ago and holds Lake Waiau, among the highest lakes in the Pacific basin.</span><button onclick="readMore()" id="moreButton" class="buttonfs orangef">Read more</button></div>
+
+
+<div id="sidebar">
+<table class="v3-table" style="height:100%;width:100%;">
+<tr>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/8/8d/Mauna_Kea_from_the_ocean.jpg" target="_blank" rel="noopener" style="display:flex;"><img src="images/peaks/mauna-kea.jpg" style="display:inline-block;border:0;width:400px;max-width:100%;border-radius:3px;" alt="Mauna Kea"></a>
+<div style="font-size:0.8em;color:#666;padding:3px 2px;">Vadim Kurland, CC BY 2.0</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="sidebar_content">
+<div class="stat"><span class="label">Height</span><span class="value">33,500 ft</span></div>
+<div class="stat"><span class="label empty"></span><span class="value">~10.2 km from the Pacific seafloor</span></div>
+<div class="stat"><span class="label">Solar System Rank</span><span class="value">11 of 13</span></div>
+<div class="stat"><span class="label">Body</span><span class="value">Earth</span></div>
+<div class="stat"><span class="label">Type</span><span class="value">Dormant shield volcano</span></div>
+<div class="stat"><span class="label">Location</span><span class="value">Island of Hawai&#699;i, United States</span></div>
+<div class="stat"><span class="label">Coordinates</span><span class="value">19.82&deg; N, 155.47&deg; W</span></div>
+<div class="stat"><span class="label">Discovered</span><span class="value">First recorded summit ascent, 1823</span></div>
+</div>
+</td>
+</tr>
+<tr>
+<th>Checklists</th>
+</tr>
+<tr>
+<td>
+<div class="sidebar_content">
+<ul class="bullets-withicon">
+<li><i class="fa-li fa fa-user-group"></i><a href="checklists.html">0 Member Ascents</a></li>
+<li><i class="fa-li far fa-snowflake"></i><a href="checklists.html">0 Member Winter Ascents</a></li>
+<li><i class="fa-li fa fa-person-skiing"></i><a href="checklists.html">0 Member Ski Descents</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th>Planning</th>
+</tr>
+<tr>
+<td>
+<div class="sidebar_content">
+<ul class="bullet1 right-arrows">
+<li><a href="#weather" onclick="showTab(5)">Weather</a></li>
+<li><a href="conditions.html">Peak Conditions&nbsp;(Last: never)</a></li>
+<li><a href="gpx.html">GPX Library Entries (0)</a></li>
+<li><a href="reception.html">Relay-Sat Reception</a></li>
+<li><a href="climb-times.html">User Climb Times</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr class="hide-6">
+<th>Geology</th>
+</tr>
+<tr class="hide-6">
+<td>
+<div class="sidebar_content">
+<ul class="bullet1 right-arrows">
+<li><a href="worlds.html">Name History</a></li>
+<li><a href="worlds.html">Discovery History</a></li>
+<li><a href="worlds.html">Geology</a></li>
+<li><a href="worlds.html">More Information</a></li>
+</ul>
+<div style="text-align:right;margin-right:10px;"><a href="worlds.html">View All</a></div>
+</div>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<div id="tabGroup">
+
+<div style="width:100%;float:left;clear:both;">
+ <ul class="tabs no-wrap">
+  <li class="tab"><input type="radio" name="tabs" checked="checked" id="tab1"><label for="tab1" id="tabs1-link" onclick="showTab(1)">Photos</label></li>
+  <li class="tab"><input type="radio" name="tabs" id="tab2"><label for="tab2" id="tabs2-link" onclick="showTab(2)">Routes</label></li>
+  <li class="tab"><input type="radio" name="tabs" id="tab3"><label for="tab3" id="tabs3-link" onclick="showTab(3)"><span class="hide-5">Trip Reports</span><span class="show-5">Trips</span></label></li>
+  <li class="tab"><input type="radio" name="tabs" id="tab4"><label for="tab4" id="tabs4-link" onclick="showTab(4)">Map</label></li>
+  <li class="tab"><input type="radio" name="tabs" id="tab5"><label for="tab5" id="tabs5-link" onclick="showTab(5)"><i class="fa-solid fa-cloud-sun fa-lg" style="color:#FFF900;"></i></label></li>
+ </ul>
+</div>
+
+<div id="tab1-content" class="content" style="display:block;width:100%;"><div style="padding:8px 10px;color:#222;"><i class="fa-solid fa-panorama" style="font-size:1.5em;"></i>&nbsp;&nbsp;Photos of Mauna Kea.<br><br><div class="peakGroupedPhotosWrap">Snow-capped Mauna Kea viewed across the ocean <em>(Vadim Kurland, CC BY 2.0)</em><br><span><a href="https://upload.wikimedia.org/wikipedia/commons/8/8d/Mauna_Kea_from_the_ocean.jpg" target="_blank" rel="noopener"><img src="images/peaks/mauna-kea.jpg" style="width:560px;max-width:100%;border-radius:4px;" alt="Mauna Kea"></a></span></div><div style="clear:both;padding-top:8px;"><strong>Quick facts</strong><ul class="bullets-withicon"><li>Summit is 13,803 ft above sea level but ~33,500 ft from its seafloor base</li>
+<li>Tallest mountain on Earth measured base-to-peak</li>
+<li>Last erupted roughly 4,500&ndash;6,000 years ago</li>
+<li>Hosts 13 observatories funded by 11 countries</li>
+<li>Earth's true champion &mdash; if you count the underwater part</li></ul></div></div></div>
+<div id="tab2-content" class="content" style="display:none;width:100%;"><div style="padding:8px 10px;color:#222;"><h2 style="margin-top:4px;">Routes</h2><ul class="bullet1 right-arrows"><li><a href="routes.html"><strong>Summit Road</strong></a> &mdash; drive to ~13,800 ft</li><li><a href="routes.html"><strong>Humu&#699;ula Trail</strong></a> &mdash; ~6 mi on foot</li></ul><p>The catch: only the top ~13,800 ft is above water. The other ~19,700 ft of this mountain is underwater, so nobody actually climbs the full ~33,500 ft. Still counts.</p></div></div>
+<div id="tab3-content" class="content" style="display:none;width:100%;"><div style="padding:8px 10px;color:#222;"><h2 style="margin-top:4px;">Trip Reports</h2><p>Plenty of visitors reach this summit &mdash; most of them never realizing they are standing on Earth&rsquo;s tallest mountain. Post your report!</p></div></div>
+<div id="tab4-content" class="content" style="display:none;width:100%;"><div style="padding:8px 10px;color:#222;"><h2 style="margin-top:4px;">Map</h2><p>Island of Hawai&#699;i, United States &mdash; <strong>19.82&deg; N, 155.47&deg; W</strong>.</p><a href="https://upload.wikimedia.org/wikipedia/commons/8/8d/Mauna_Kea_from_the_ocean.jpg" target="_blank" rel="noopener"><img src="images/peaks/mauna-kea.jpg" style="width:560px;max-width:100%;border:1px solid #999;border-radius:4px;" alt="Mauna Kea location"></a><p style="margin-top:8px;"><a href="https://www.google.com/maps" rel="noopener">Google Maps <i class="fas fa-external-link-alt"></i></a></p></div></div>
+<div id="tab5-content" class="content" style="display:none;width:100%;"><div style="padding:8px 10px;color:#222;"><h2 style="margin-top:4px;">Conditions &mdash; Mauna Kea</h2><p>Actual weather! Wind, snow, and breathable air (less of it the higher you go). Comparatively hospitable &mdash; and, by solar-system standards, comparatively tiny. The only peak here you can summit by road &mdash; bring a jacket, not a spacesuit.</p><p style="margin-top:6px;"><i class="fa-solid fa-mountain" style="color:#b36602;"></i>&nbsp; <strong>Summit:</strong> 33,500 ft (~10.2 km from the Pacific seafloor).</p></div></div>
+
+</div>
+
+</div>
+
+</div>
+<div id="sfooter">
+  <div class="footer-row">
+    <div class="footer-section">
+      <h3>29ers.com</h3>
+      <ul>
+        <li><a tabindex="0" href="about.html">About</a></li>
+        <li><a tabindex="0" href="support.html">Your Support</a></li>
+        <li><a tabindex="0" href="search.html">Search the Site</a></li>
+        <li><a tabindex="0" href="contact.html">Contact Site Admin</a></li>
+        <li><a tabindex="0" href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Creator</h3>
+      <ul>
+        <li><a tabindex="0" href="https://spencerboucher.com" rel="noopener"><span class="fas fa-globe"></span>&nbsp; Spencer Boucher</a></li>
+        <li><a tabindex="0" href="https://www.14ers.com" rel="noopener"><span class="fas fa-mountain-sun"></span>&nbsp; The original: 14ers.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Mission App</h3>
+      <ul>
+        <li><a tabindex="0" href="app.html">More info</a></li>
+        <li><a tabindex="0" href="https://mars.nasa.gov/" rel="noopener">NASA Mars Exploration</a></li>
+        <li><a tabindex="0" href="https://science.nasa.gov/dwarf-planets/vesta/" rel="noopener">NASA Vesta / Dawn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-row" style="margin-bottom:10px;">
+    <div class="copyright" style="line-height:1.6;">
+        <a tabindex="0" href="about.html">&copy; 2026 29ers.com<sup>&reg;</sup></a>, 29ers Inc.<br>
+        <span style="font-size:0.85em;opacity:0.85;">Not affiliated with 14ers.com or 14ers Inc. Imagery: NASA/JPL and Wikimedia (public domain / CC, credited per photo). Hero: Olympus Mons by ESA/DLR/FU Berlin (CC BY-SA 3.0 IGO).</span>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

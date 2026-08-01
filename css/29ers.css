@@ -1,0 +1,52 @@
+/*
+ * 29ers.com — the handful of rules this parody needs on top of the
+ * stylesheets cloned from 14ers.com. Kept separate so the vendored
+ * files stay byte-faithful to the originals.
+ */
+
+/* Some of our stat labels ("Solar System Rank") are wider than the fixed 110px
+   slot 14ers.com's short labels fit in, and would overlap the value. Keep the
+   110px minimum for alignment but let longer labels grow. */
+span.label {
+	width: auto;
+}
+
+/* The current-page breadcrumb is an href-less <a> so it picks up the chevron
+   geometry in siteheader.css; it should not behave like a link. */
+.breadcrumb li a:not([href]) {
+	pointer-events: none;
+	cursor: default;
+}
+
+/* Recent Activity tab strip. On 14ers.com these are jQuery UI tabs that swap
+   the panel over AJAX; here they are plain links, so the look is rebuilt from
+   the #tinyTabGroup overrides in jquery_uioverrides.css. */
+ul#tabs.tinyTabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+	margin: 0;
+	padding: 4px 4px 0 4px;
+	list-style: none;
+	border-radius: 0;
+}
+ul#tabs.tinyTabs li.tinyTab {
+	background: var(--tiny-tab-bg-color);
+	border-radius: 5px 5px 0 0;
+	font-size: 9pt;
+	font-weight: bold;
+}
+ul#tabs.tinyTabs li.tinyTab a {
+	display: block;
+	padding: 4px 10px;
+	color: #444;
+	text-decoration: none;
+	outline: none;
+}
+ul#tabs.tinyTabs li.tinyTab.active {
+	background: var(--tiny-tab-bg-active-color);
+}
+ul#tabs.tinyTabs li.tinyTab.active a,
+ul#tabs.tinyTabs li.tinyTab a:hover {
+	color: var(--tiny-tab-text-active-color);
+}

@@ -1,0 +1,310 @@
+/* Site-wide overrides of the JQUERY User Interface Style (UI) */
+
+/* WIDGET (Overall) */
+.ui-widget {
+	font-family: var(--font-main-family) !important;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: var(--font-main-family) !important;
+}
+.ui-widget-header {
+	font-weight:500;
+	font-size:12pt;
+	height:29px;
+	vertical-align:bottom;
+	border: 0;
+	color: #FF9900;
+	background:#FFF;
+	-webkit-border-radius:4px 4px 0 0;
+	-moz-border-radius:4px 4px 0 0;
+	border-radius:4px 4px 0 0;
+}
+.ui-widget.ui-widget-content {
+	border: 0 !important;
+}
+.ui-widget-content {
+	border: 0 solid var(--widget-bg-color);
+	padding:0;
+	color:var(--text-primary-color) !important;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+}
+
+.ui-widget-content a:link, a:not([href]) { color : var(--text-link-color); }
+.ui-widget-content a:visited { color : var(--text-link-color);; }
+.ui-widget-content a:hover	{ color : var(--text-link-hover-color); }
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 0 solid #CCC;
+	background: var(--widget-bg-color);
+	font-weight: 500;
+}
+.ui-widget-header a:link {
+	color: #FFF;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+.ui-widget-header .ui-state-active {
+	border: 1px solid var(--widget-bg-color);
+	background-color: var(--widget-bg-active-color);
+	font-weight: 500;
+	color: #FFF;
+}
+.ui-widget-header .ui-state-active a {
+	color: var(--widget-text-active-color);
+	text-decoration: none;
+}
+
+
+/* TABS */
+.ui-tabs .ui-tabs-nav li {
+	left:6px;
+	top:1px;
+	margin:0 2px 0 0;
+	padding:1px 1px 0 1px;
+	-webkit-border-radius:6px 6px 0 0;
+	-moz-border-radius:6px 6px 0 0;
+	border-radius:6px 6px 0 0;
+}
+.ui-tabs .ui-tabs-panel {
+	padding:8px;
+	border:2px solid var(--widget-bg-color) !important;
+}
+.ui-tabs a {
+	outline:none;
+}
+.ui-tabs .ui-tabs-panel {
+	background-color: var(--widget-bg-active-color);
+}
+.ui-tabs-anchor {
+	div i {
+		color:#FFF;
+	}
+}
+.ui-tabs-active .ui-tabs-anchor {
+	div i {
+		color:var(--widget-bg-color);
+	}
+}
+
+/* Make tiny TABS */
+#tinyTabGroup .ui-widget-content { 
+	border:0 !important;
+	background:#FFF;
+}
+#tinyTabGroup .ui-widget-header {
+	border:0 !important;
+	background:var(--tiny-tab-bg-color) !important;
+	font-weight:bold !important;
+	font-size:9pt !important;
+	height:auto !important;
+	color:var(--text-link-color);
+}
+#tinyTabGroup .ui-widget-header .ui-tabs-tab {
+	border:0 !important;
+}
+#tinyTabGroup .ui-widget-header .ui-state-default {
+	background-color:#EEE !important;
+}
+#tinyTabGroup .ui-widget-header .ui-tabs-active {
+	background-color:#FFF !important;
+}
+#tinyTabGroup .ui-tabs-panel {
+	background-color:#FFF !important;
+	padding:0 !important;
+}
+#tinyTabGroup .ui-tabs-nav {
+	margin:0 !important;
+	padding:2px 2px 1px 0 !important;
+}
+#tinyTabGroup .ui-tabs-nav li {
+	top:1px !important;
+	padding: 0 !important;
+	-webkit-border-radius:5px 5px 0 0 !important;
+	-moz-border-radius:5px 5px 0 0 !important;
+	border-radius:5px 5px 0 0 !important;
+}
+#tinyTabGroup .ui-tabs-nav li a {
+	padding:3px 3px;
+	text-decoration:none;
+	outline:none;
+}
+#tinyTabGroup .ui-tabs-nav li.ui-tabs-selected a, #tinyTabGroup .ui-tabs-nav li.ui-state-disabled a, #tinyTabGroup .ui-tabs-nav li.ui-state-processing a {
+	cursor:text;
+}
+#tinyTabGroup .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+	cursor:pointer;
+}
+#tinyTabGroup .ui-state-active a:visited, #tinyTabGroup .ui-state-active a:link, #tinyTabGroup .ui-state-active a:hover {
+	color:var(--tiny-tab-text-active-color) !important;
+}
+#tinyTabGroup .ui-tabs-nav .ui-tabs-anchor {
+	padding:3px !important;
+}
+#tinyTabGroup .ui-state-default a, #tinyTabGroup .ui-state-default a:link {
+	color: var(--text-link-color);
+}
+
+
+/* DIALOG */
+.ui-dialog {
+	z-index: 6000000 !important;
+    user-select: none;
+}
+.ui-dialog div.ui-widget-header {
+	background-color:var(--widget-bg-color) !important;
+	color:#FFF !important;
+}
+.ui-dialog .ui-dialog-content {
+	padding:.5em .7em;
+}
+.ui-dialog.ui-widget-content {
+	border:1px solid var(--widget-bg-color) !important;
+	color: #333 !important;
+	-webkit-box-shadow: 4px 4px 8px -4px #000 !important;
+	-moz-box-shadow: 4px 4px 8px -4px #000 !important;
+	box-shadow: 4px 4px 8px -4px #000 !important;
+}
+.ui-dialog div.ui-dialog-buttonpane {
+	background-color:#f1f1f1 !important;
+	border:0 !important;
+	-webkit-border-radius:0 !important;
+	-moz-border-radius:0 !important;
+	border-radius:6px !important;
+}
+@media (max-width : 600px) {
+	.ui-dialog {
+		max-width: 60% !important;
+		max-height: 80% !important;
+	}
+}
+
+
+/* ACCORDION */
+#accordion {
+	margin:3px !important;
+	font-size: 1em !important;
+}
+.ui-accordion-header {
+	color:#FFF !important;
+}
+#accordion h3.ui-state-default,
+#accordion h3.ui-widget-header .ui-state-default {
+	background-color: #BDBDBD; background-image: -webkit-gradient(linear, left top, left bottom, from(#BDBDBD), to(#707070));
+	background-image: -webkit-linear-gradient(top, #BDBDBD, #707070);
+	background-image: -moz-linear-gradient(top, #BDBDBD, #707070);
+	background-image: -ms-linear-gradient(top, #BDBDBD, #707070);
+	background-image: -o-linear-gradient(top, #BDBDBD, #707070);
+	background-image: linear-gradient(to bottom, #BDBDBD, #707070);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#BDBDBD, endColorstr=#707070);
+}
+#accordion h3.ui-state-default,
+#accordion h3.ui-widget-content .ui-state-default,
+#accordion h3.ui-widget-header .ui-state-default,
+#accordion h3.ui-state-focus {
+	border: 0 !important;
+	text-decoration:none !important;
+	outline:none !important;
+}
+#accordion div.ui-widget-content {
+	border:1px solid #707070;
+	background: #EEE url(/images/vendor/ui-bg_highlight-soft_100_eeeeee_1x100.png) 50% top repeat-x;
+	color: #333;
+	padding:0;
+	border-radius:0;
+}
+.ui-accordion-header {
+	padding: .3em .2em .2em .3em !important;
+}
+#accordion .ui-icon, #accordion .ui-button {
+    background-image: url(/images/vendor/ui-icons_ffffff_256x240.png);
+}
+
+/* DATE-PICKER */
+.ui-datepicker {
+	width: 22em !important;
+	font-size: 1.1em !important;
+}
+#ui-datepicker-div {
+	border: 1px solid #CCC;
+	background-color:#CCC;
+	z-index:1000 !important;
+}
+#ui-datepicker-div .ui-widget-header {
+	border: 1px solid var(--widget-hdr-bdr-color) !important;
+    background: var(--widget-hdr-bg-color) url(/images/vendor/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x !important;
+    color: #FFF !important;
+}
+#ui-datepicker-div .ui-state-default {
+    border: 1px solid #CCC;
+    background: #f6f6f6 url(/images/vendor/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;
+    font-weight: bold;
+	color: #000;
+}
+@media (max-width : 600px) {
+	.ui-datepicker {
+		width: 17em !important;
+		font-size: 0.8em !important;
+	}
+}
+
+
+/* PROGRESS BAR */
+.ui-progressbar-value.ui-widget-header {
+	border: 1px solid var(--widget-hdr-bdr-color) !important;
+	background: var(--widget-hdr-bg-color) url("/images/vendor/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x !important;
+}
+.ui-progressbar.ui-widget-content {
+    border: 1px solid #DDD !important;
+    background: #EEE url("/images/vendor/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x !important;
+}
+
+	
+/* TOOL-TIP */
+.ui-tooltip {
+	background: transparent !important;
+	-webkit-box-shadow: 4px 4px 8px -4px #000 !important;
+	-moz-box-shadow: 4px 4px 8px -4px #000 !important;
+	box-shadow: 4px 4px 8px -4px #000 !important;
+	border: 0 !important;
+	padding: 0 !important;
+	font-size: 10pt !important;
+}
+.ui-tooltip .tooltip-inner {
+	height:100%;
+	width:100%;	
+	border-radius:4px;
+	padding:3px;
+	background-color:#abc8da;
+	border:2px solid #71869b;
+}
+.ui-tooltip h3#tooltip-title {
+	background-color: transparent;
+	color: var(--text-hdr-color);
+	text-align:left;
+	padding: 2px 0 3px 0;
+	margin-top: 0 !important;
+	font-size: 13px;
+	font-weight: bold;
+	border-bottom: 0 !important;
+}
+.ui-tooltip img {
+	border-radius:4px;
+	-webkit-border-radius:4px; 
+	-moz-border-radius:4px;
+	margin-bottom: -4px !important; /* Done to remove the computed space jquery adds to bottom of tooltip content */
+}
+@media (max-width : 800px) {
+	.ui-tooltip {
+		display:none !important;
+	}
+}

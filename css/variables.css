@@ -1,0 +1,189 @@
+/*
+ * Purpose: Site Color Variables
+ *
+ * Copyright 14ers.inc, 14ers.com
+ */
+:root {
+
+	/* Fonts */
+	--font-main-family: 		'Roboto', sans-serif;
+
+
+	/* Colors */
+    --peak-14er-color:          rgba(244, 149, 17, 1);
+    --peak-13er-color:			rgba(14, 81, 161, 1);
+
+	--bg-main-color: 			#FDFDFD;
+	--bg-object-hover-color:	#ffe6a3;
+	--bg-footer-color1: 		#f1f1f1;
+	--bg-footer-color2:			#BDBDBD;
+	--bg-page-dim-overlay:		rgba(0, 0, 0, 0.7);
+
+	--site-header-bg-color: 	transparent;
+	--site-header-text-color: 	#FFFFFF;
+	--site-header-wrap-color: 	#663333;
+
+	--text-primary-color: 		#141414;
+	--text-primary-dim-color: 	#888888;
+	--text-lightondark-color: 	#FFFFFF;
+	--text-link-color: 			#0c89e8;
+	--text-link-light-color: 	#48abed;
+	--text-link-hover-color:	#f49820;
+	--text-error-color: 		#FF0000;
+	--text-success-color: 		#01a001;
+	--text-highlight-color: 	#FFFF00;
+	--text-hdr-color: 			#b36602;
+	--text-hdr-bdr-color: rgba(179, 102, 2, 0.32);
+
+	--menu-bg-color: 			#FFFFFF;
+	--menu-border-color: 		#CCCCCC;
+	--menu-shadow-color: 		#6d6d6d;
+	--menu-item-hover-bg-color: #F2F2F2;
+	--menu-separator-color: 	#D8D8D8;
+	--menu-mobile-header-color:	#6d6d6d;
+
+	--footer-bg-color: 			#003049;
+	--footer-text-color: 		#FFFFFF;
+
+	--button-bg1-color: 		#f47a20;
+	--button-hover1-color: 		#f49820;
+	--button-text-color: 		#FFFFFF;
+	--button-text-disable-color:lightgray;
+	--button-text-shadow-color: #F2F2F2;
+	--button-border-color: 		#a85f00;
+	--button-shadow-color: 		1px 2px 3px rgba(0,0,0,.3);
+
+	--table-bg-color:			#f1f1f1;
+	--table-border-color: 		#3e3e3e;
+	--table-th-bg-color: 		#3e3e3e;
+	--table-th-text-color: 		#FFFFFF;
+	--table-row-bg-even-color: 	#FFFFFF;
+	--table-row-bg-odd-color: 	#f1f1f1;
+	--table-row-bg-x-color: 	#FFCCCC;
+
+	--bullet1-color: 			#ff9900;
+	--bullet2-color: 			#3e3e3e;
+
+	--form-bg-color:			#f1f1f1;
+	--form-border-color:		#d3d3d3;
+
+	--form-field-border-color:	#cccccc;
+	--form-field-info-color:	#009688;
+	--form-field-error-color:	#ff0000;
+	--form-field-success-color:	#00ff00;
+	--form-function-bar-color:	#FFFFFF;
+
+	--box-bg-color:				#f2ebda;
+	--box-border-color:			#999999;
+
+	--card-bg-color:			#FFFFFF;
+	--card-border-color:		#bababa;
+	--card-hdr-color:			#333333;
+	--card-image-bdr-color:		#ebebeb;
+	--card-badge-bg-color:		#0d0da5;
+	--card-badge-text-color:	#FFFFFF;
+
+	--widget-bg-color:			#d57e17;
+	--widget-bg-active-color:	#e1ebf2;
+	--widget-text-color:		#FFFFFF;
+	--widget-text-active-color:	#d57e17;
+	--widget-hdr-bg-color:		#f6a828;
+	--widget-hdr-bdr-color:		#e78f08;
+	--widget-alert-bg-color:	#c5d8e8;
+	--widget-alert-bdr-color:	#999999;
+	--widget-alert-print-bg-color:#f2ebda;
+
+	--tiny-tab-bg-color:		#EEEEEE;
+	--tiny-tab-bg-active-color:	#e1ebf2;
+	--tiny-tab-text-color:		#FFFFFF;
+	--tiny-tab-text-active-color:#d57e17;
+
+	--poptip-bg-color: 			#abc8da;
+	--poptip-border-color: 		#71869b;
+	--poptip-shadow-color: 		#000000;
+	--poptip-title-color: 		#cc6600;
+
+	--paging-bg-color: 			#EEEEEE;
+	--paging-border-color: 		#bababa;
+	--paging-text-color: 		#747474;
+	--paging-current-bg-color: 	#bfbfbf;
+	--paging-current-bdr-color: #bfbfbf;
+	--paging-current-text-color:#ffffff;
+	--paging-hover-bg-color: 	#d2d2d2;
+	--paging-hover-bdr-color: 	#d2d2d2;
+	--paging-hover-text-color:	#ffffff;
+
+	--class1-color:				#66cc00;
+	--class2-color:				#0000ff;
+	--class3-color:				#ec01ec;
+	--class4-color:				#ff9900;
+	--class5-color:				#ff0000;
+
+	--like-bg-color:			#09d611;
+	--like-bg-hover-color:		#f1f1f1;
+	--like-text-color:			#FFFFFF;
+
+	--icon-checkmark-color:		#009900;
+	--icon-skiing-color:		#FF0000;
+	--icon-delete-color:		#FF0000;
+	--icon-wrench-color:		#FF0000;
+	--icon-star-color:			#FF9900;
+	--icon-snowflake-color:		#0055ff;
+	--icon-hiking-color:		brown;
+	--icon-dice-color:			#cc00ff;
+	--icon-panorama-color:		royalblue;
+	--icon-user-color:			green;
+	--icon-file-color:			#c9c71c;
+	--icon-info-color:			#FF9900;
+	--icon-map-color:			#FF9900;
+	--icon-folder-color:		#ffc107;
+	--icon-edit-color:			green;
+	--icon-add-color:			#004CFF;
+	--icon-exclaim-color:		#ff6d19;
+	--icon-gear-color:			#607d8b;
+	--icon-upload-color:		#EC46F0;
+	--icon-download-color:		#3EB000;
+	--icon-mobile-color:		#999999;
+	--icon-globe-color:			royalblue;
+	--icon-milestone-color:		#FF0000;
+	--icon-weather-color:		#FF8C00;
+	--icon-dollar-color:		#000000;
+	--icon-warn_exclaim-color:	#FF0000;
+	--icon-copyright-color:		#008000;
+	--icon-cookies-color:		#f4a460;
+	--icon-privacy-color:		#0051ff;
+
+	--trip-full-stamp-color:	gold;
+	--trip-mini-stamp-color:	mediumseagreen;
+	--trip-external-stamp-color:lightslategray;
+	--trip-private-stamp-color:	#FFFF00;
+
+    --route-header-bg-color:    lightgray;
+
+    --checklist-finisher-color: #FF9900;
+
+	--photo-featured-bdr-color:	#4274ab;
+	--photo-featured-bg-color:	#4274ab;
+	--photo-placeholder-bg-color:#FFCC66;
+
+	--photo-single-bdr-img:		1px solid #000000;
+	--photo-single-bdr-div:		1px solid #000000;
+
+	--age-1-color:				rgb(255, 0, 0, 0.8);
+	--age-2-color:				rgba(255, 203, 0, 0.8);
+	--age-3-color:				rgb(0, 90, 255, 0.2);
+
+	--temperature-high-color:	#ef3725;
+	--temperature-low-color:	#15a3e0;
+
+	--active-color:				limegreen;
+	--inactive-color:			#ffc71d;
+
+
+	/* Images */
+	--image-site-logo:			url(/images/site_logo.svg);
+	--image-site-header-bg:		url(/images/vendor/headerbar_back2.jpg);
+	--image-spinner-big:		url("/images/vendor/spinner_400x400.gif");
+	--image-spinner-small:		url("/images/vendor/spinner_32x32.gif");
+
+}

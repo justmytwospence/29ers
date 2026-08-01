@@ -1,0 +1,141 @@
+/* CSS Document */
+div.forecastSection {
+	width:99%;
+	min-width:99%;
+	overflow: auto;
+	overflow-y: hidden;
+	-ms-overflow-y: hidden;
+	margin-top:6px;
+	padding-left:3px;
+	padding-bottom:3px;
+	border-radius:6px;
+	background-color:#DDDDDD;
+	border:1px solid #DDDDDD;
+}
+div.forecastScrolling {
+	white-space:nowrap;
+	overflow: auto;
+	overflow-y: hidden;
+	-ms-overflow-y: hidden;
+	background-color:#F6F6F6;
+}
+table.forecastDetailed {
+	display:none;
+	width:100%;
+	border-spacing: 1px;
+	border-collapse: separate;
+}
+table.forecastDetailed, 
+table.forecastHeader {
+	width:99%;
+	min-width:99%;
+	border-radius:6px;
+	border-spacing:1px;
+	border-collapse:separate;
+}
+table.forecastDetailed tr td:first-child {
+	white-space:nowrap;
+	width:125px;
+	text-align:right;
+	padding: 6px 10px 6px 6px;
+	vertical-align:top;
+	font-weight: bold;
+}
+table.forecastDetailed tr td:nth-child(2) {
+	width:100%;
+	padding:6px;
+	text-align:left;
+	vertical-align:top;
+}
+div.forecastHeader {
+	text-align:left;
+	font-size:11pt;
+	font-weight:bold;
+	padding:6px;
+}
+table.forecastHeader th {
+	text-align:left;
+	font-size:12pt;
+	padding:6px;
+}
+
+table.forecastDays tr td {
+	font-size:10pt;
+	padding:5px;
+	vertical-align:top;
+	width:95px;
+	text-align:center;
+}
+table.forecastDays tr td div div {
+	width:100%;
+}
+table.forecastGraphs {
+	width:100%;
+	display:none;
+	padding-bottom:4px;
+}
+div.forecastPeriodName {
+	height:35px;
+	min-height:35px;
+}
+div.forecastLinks {
+	float:left;
+	clear:right;
+	margin-top:8px;
+	padding-left:3px;
+}
+div.forecastIcon {
+	padding:2px;
+}
+div.forecastIcon img {
+	width:60px;
+	height:60px;
+	border-radius:3px;
+	border:0;
+}
+@media (max-width : 600px) {
+	div.forecastPeriodName {
+		font-size:0.9em;
+	}
+	div.forecastIcon img {
+		width:50px;
+		height:50px;
+	}
+}
+@media (min-width : 1200px) {
+	div.forecastIcon img {
+		width:75px;
+		height:75px;
+	}
+}
+div.forecastTemp, 
+div.forecastWind {
+	line-height:18px;
+}
+div.forecastWind, 
+div.forecastShortText {
+	font-size:.8em;
+	line-height: 1.1em;
+}
+div.forecastTemp.high {
+	color: var(--temperature-high-color);
+}
+div.forecastTemp.low {
+	color: var(--temperature-low-color);
+}
+div.forecastTemp img, 
+div.forecastWind img {
+	width:16px;
+	height:16px;
+	vertical-align:middle;
+	border:0;
+}
+div.forecastShortText {
+	margin-top:2px;
+}
+table.alternaterowcolors1 tr:nth-child(odd) {
+	background-color: #F7F6F6;
+}
+table.alternaterowcolors1 tr:nth-child(even) {
+	background-color: #FFFFFF;
+}

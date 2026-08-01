@@ -1,0 +1,112 @@
+/*
+ * Purpose: Site header color CSS. This is also used in the PHPBB forum, that's
+ *			why it's a file of its own.
+ *
+ * Copyright 14ers.inc, 14ers.com
+ */
+
+
+/* SITE HEADER
+---------------------------------------- */
+#siteheader {
+	color: var(--site-header-text-color);
+	background-color:transparent;
+	box-shadow:0 2px 2px rgba(0,0,0,.5);
+}
+#siteheader-logo a {
+	background-color: transparent;
+}
+#siteheader-menuwrap ul a {
+	color:var(--site-header-text-color);
+}
+#siteheader-menuwrap ul ul a {
+	background-color:var(--menu-bg-color);
+}
+#siteheader-menuwrap ul span {
+	background-color:var(--menu-bg-color);
+}
+#siteheader-menuwrap ul li:hover>a.menu_topitem,
+#siteheader-menuwrap ul li.menu_topitem:hover > a {
+	color:#fdd101 !important;
+}
+@media (min-width : 1000px) {
+	#siteheader-menuwrap ul li:hover:after {
+		border-right: 9px solid transparent;
+		border-bottom: 9px solid #FFFFFF;
+		border-left: 9px solid transparent;
+	}
+}
+#siteheader-menuwrap ul ul li:hover>a {
+
+}
+#siteheader-menuwrap ul ul.mm_submenu {
+	background:var(--menu-bg-color);
+	border:1px solid var(--menu-border-color);
+	-webkit-box-shadow: 0 5px 14px 0 var(--menu-shadow-color) !important;
+	-moz-box-shadow:0 5px 14px 0 var(--menu-shadow-color) !important;
+	box-shadow: 0 5px 14px 0 var(--menu-shadow-color) !important;
+}
+div.mm_submenu_columnlist_div ul li.mm_column_header {
+
+}
+div.mm_submenu_columnlist_div ul li:not(.mm_column_header):hover {
+	background-color: var(--menu-item-hover-bg-color) !important;
+}
+div.mm_submenu_columnlist_div ul li.mm_column_header span {
+	border-bottom:1px solid var(--menu-separator-color);
+}
+div.mm_submenu_columnlist_div ul a:link,
+div.mm_submenu_columnlist_div ul a:not([href]),
+div.mm_submenu_columnlist_div ul a:visited {
+	color : var(--text-link-color) !important;
+}
+div.mm_submenu_columnlist_div ul a:hover {
+	color : var(--text-link-hover-color) !important;
+}
+#siteheader-menuwrap.menu-mobile ul ul a {
+	background:#FFF;
+}
+#siteheader-menuwrap.menu-mobile ul ul li:hover>a {
+}
+#siteheader-menuwrap.menu-mobile ul ul li a:hover, #siteheader-menuwrap.menu-mobile ul ul li a:active {
+}
+#siteheader-menuwrap.menu-mobile ul li:hover>a.menu_topitem {
+}
+#siteheader-menuwrap.menu-mobile > ul > li > a {
+	color: var(--text-lightondark-color);
+	background-color: var(--menu-mobile-header-color);
+}
+
+
+/* USER PROFILE MENU 
+---------------------------------------- */
+.withText {
+	color:#FFF;
+}
+#siteheader-login a.newLoginLink {
+	margin-right:20px;
+}
+#siteheader-login a.newLoginLink:hover {
+}
+ul#userProfileMenu {
+	border:1px solid #D8D8D8;
+	background-color:var(--menu-bg-color);
+	-webkit-box-shadow: 0 5px 14px 0 var(--menu-shadow-color) !important;
+	-moz-box-shadow:0 5px 14px 0 var(--menu-shadow-color) !important;
+	box-shadow: 0 5px 14px 0 var(--menu-shadow-color) !important;
+}
+ul#userProfileMenu li a {
+	color:var(--text-link-color) !important;
+}
+ul#userProfileMenu li.userProfileOption:hover{
+	background-color:var(--menu-item-hover-bg-color);
+}
+ul#userProfileMenu li.userProfileNameHeader {
+	color:var(--text-primary-color);
+}
+ul#userProfileMenu li.userProfileMenuSep {
+	border-bottom:1px solid var(--menu-separator-color);
+}
+ul#userProfileMenu li:hover>a {
+	color:var(--text-link-hover-color) !important;
+}

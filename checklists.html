@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=yes">
+<title>User Checklists | 29ers.com</title>
+<link rel="stylesheet" type="text/css" href="css/variables.css">
+<link rel="stylesheet" type="text/css" href="css/colors.css">
+<link rel="stylesheet" type="text/css" href="css/colorssiteheader.css">
+<link rel="stylesheet" type="text/css" href="css/site.css">
+<link rel="stylesheet" type="text/css" href="css/siteheader.css">
+<link rel="stylesheet" type="text/css" href="css/sitefooter.css">
+<link rel="stylesheet" type="text/css" href="css/14ers.css">
+<link rel="stylesheet" type="text/css" href="css/29ers.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="icon" href="images/site_logo.svg" type="image/svg+xml">
+</head>
+<body class="MainText1">
+
+<div id="pageoverlay" class="pageoverlay"></div>
+<div id="siteheader">
+  <div id="siteheader-logo">
+   <a target="_top" tabindex="-1" href="index.html" title="29ers.com Home"><img src="images/site_logo.svg" alt="logo" width="130" height="50"></a>
+  </div>
+
+  <div id="hamburger" class="hamburger-menu" onclick="menuExpand();return false">
+   <span></span><span></span><span></span>
+  </div>
+
+</div>
+
+  <div id="siteheader-login" tabindex="0">
+   <a href="login.html" class="newLoginLink" title="Log In">Log In&nbsp;<span class="fas fa-sign-in-alt"></span></a>
+  </div>
+
+<div id="siteheader-menuwrap">
+<ul><li class="menu_topitem"><a href="peaks.html">Explore Peaks</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="peaks.html">All Peaks</a></li><li><a href="olympus-mons.html">Olympus Mons</a></li><li><a href="rheasilvia.html">Rheasilvia</a></li><li><a href="mount-everest.html">Mount Everest</a></li><li><a href="about.html">What are 29ers?</a></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="routes.html">Routes &amp; Planning</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Routes</span></li><li><a href="routes.html">29er Routes</a></li><li><a href="route-selector.html">Easiest 29ers</a></li><li><a href="route-selector.html">Routes by Difficulty</a></li><li><a href="route-selector.html">Routes by Risk Factor</a></li><li><a href="route-selector.html">Route Selection Tool</a></li><li><a href="gpx.html">GPX Library</a></li><li><a href="reception.html">Relay-Sat Reception</a></li><li><a href="climb-times.html">User Climb Times</a></li></ul></div><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Getting Started</span></li><li><a href="climbing.html">Climbing 29ers</a></li><li><a href="faq.html">29er FAQ</a></li><li><a href="safety.html">Mountaineering Safety</a></li><li><a href="difficulty.html">Difficulty Rating System</a></li><li><a href="gear.html">Spacesuit &amp; Gear List</a></li><li><a href="aphelion.html">Climbing 29ers in Aphelion</a></li><li class="external-icon"><a href="https://mars.nasa.gov/">NASA Mars Exploration <i class="fas fa-external-link-alt"></i></a></li></ul></div><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Weather</span></li><li><a href="weather.html">Summit Forecasts</a></li><li class="external-icon"><a href="https://mars.nasa.gov/weather/">InSight/MEDA Weather <i class="fas fa-external-link-alt"></i></a></li><li><a href="weather.html#dust">Dust Storm Tracker</a></li><li><a href="weather.html#conjunction">Solar Conjunction</a></li></ul></div><div class="mm_submenu_columnlist_div"><ul><li class="mm_column_header"><span>Mission App</span></li><li><div class="menu_promo_block"><a href="app.html"><img src="images/peaks/olympus-mons.jpg" style="width: 100% !important; height: auto !important; margin-bottom: 8px; border-radius:6px;"></a></div></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="conditions.html">Conditions &amp; Reports</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="conditions.html">Peak Conditions</a></li><li><a href="conditions.html#post">Post a Condition Update</a></li><li class="sep nomobile"></li><li><a href="landing-sites.html">Landing Sites &amp; Status</a></li><li><a href="landing-sites.html#post">Post a Status Update</a></li><li class="sep nomobile"></li><li><a href="trip-reports.html">Trip Reports</a></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="forum.html">Community</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="forum.html">Forum</a></li><li class="sep nomobile"></li><li><a href="checklists.html">User Checklists</a></li><li><a href="checklists.html#stats">Checklist Statistics</a></li><li class="sep nomobile"></li><li class="external-icon"><a href="https://spencerboucher.com" rel="noopener">Spencer Boucher <i class="fas fa-external-link-alt"></i></a></li></ul></div></div></li></ul></li><li class="menu_topitem"><a href="about.html">More</a><ul class="mm_submenu"><li><div class="mm_submenu_divwrap"><div class="mm_submenu_columnlist_div"><ul><li><a href="about.html">About 29ers.com</a></li><li><a href="support.html">Support</a></li><li><a href="store.html">29ers.com Store</a></li><li class="sep nomobile"></li><li><a href="contact.html">Contact Site Admin</a></li><li><a href="search.html">Search the Site</a></li><li class="sep nomobile"></li><li><a href="about.html">What are 29ers?</a></li></ul></div></div></li></ul></li></ul>
+</div>
+
+<div id="wrap">
+
+<div class="breadcrumb" id="breadcrumbwrap">
+  <ul class="breadcrumb">
+   <li><a href="index.html">Home</a></li>
+   <li><a>User Checklists</a></li>
+  </ul>
+</div>
+
+<a id="top" accesskey="t"></a>
+<div style="width:100%;clear:both;"></div>
+<h1>User Checklists</h1>
+<div class="overviewText" style="max-width:980px;">Track your ascents of all 13 of the solar system&rsquo;s 29ers. Log in to tick off peaks, winter ascents, and ski descents.</div><br><table style="width:100%;border-collapse:collapse;font-size:0.92em;margin-bottom:22px;"><thead><tr><th style="text-align:left;padding:7px 10px;border-bottom:2px solid #eb8f00;color:#633;">#</th><th style="text-align:left;padding:7px 10px;border-bottom:2px solid #eb8f00;color:#633;">Peak</th><th style="text-align:left;padding:7px 10px;border-bottom:2px solid #eb8f00;color:#633;">Body</th><th style="text-align:left;padding:7px 10px;border-bottom:2px solid #eb8f00;color:#633;" style="text-align:center;">Ascent</th><th style="text-align:left;padding:7px 10px;border-bottom:2px solid #eb8f00;color:#633;" style="text-align:center;">Winter</th><th style="text-align:left;padding:7px 10px;border-bottom:2px solid #eb8f00;color:#633;" style="text-align:center;">Ski</th></tr></thead><tbody><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">1</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="olympus-mons.html">Olympus Mons</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Mars</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">2</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="rheasilvia.html">Rheasilvia</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Vesta (asteroid)</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">3</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="iapetus-ridge.html">Equatorial Ridge of Iapetus</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Iapetus (moon of Saturn)</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">4</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="boosaule-montes.html">Bo&ouml;saule Montes</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Io (moon of Jupiter)</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">5</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="ascraeus-mons.html">Ascraeus Mons</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Mars</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">6</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="ionian-mons.html">Ionian Mons</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Io (moon of Jupiter)</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">7</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="elysium-mons.html">Elysium Mons</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Mars</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">8</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="arsia-mons.html">Arsia Mons</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Mars</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">9</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="maxwell-montes.html">Maxwell Montes</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Venus</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">10</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="euboea-montes.html">Euboea Montes</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Io (moon of Jupiter)</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">11</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="mauna-kea.html">Mauna Kea</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Earth</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">12</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="mauna-loa.html">Mauna Loa</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Earth</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr><tr><td style="padding:6px 10px;border-bottom:1px solid #ddd;">13</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;"><a href="mount-everest.html">Mount Everest</a></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;">Earth</td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td><td style="padding:6px 10px;border-bottom:1px solid #ddd;" style="text-align:center;"><input type="checkbox" disabled></td></tr></tbody></table><h2 id="stats" style="border-bottom:2px solid #eb8f00;padding-bottom:3px;">Checklist Statistics</h2><div style="display:flex;gap:18px;flex-wrap:wrap;"><div style="flex:1;min-width:140px;background:#f2efe9;border-radius:6px;padding:14px;text-align:center;"><div style="font-size:2em;font-weight:bold;color:#eb8f00;">0</div><div>Members</div></div><div style="flex:1;min-width:140px;background:#f2efe9;border-radius:6px;padding:14px;text-align:center;"><div style="font-size:2em;font-weight:bold;color:#eb8f00;">0</div><div>Peaks summited</div></div><div style="flex:1;min-width:140px;background:#f2efe9;border-radius:6px;padding:14px;text-align:center;"><div style="font-size:2em;font-weight:bold;color:#eb8f00;">0</div><div>Full lists finished</div></div><div style="flex:1;min-width:140px;background:#f2efe9;border-radius:6px;padding:14px;text-align:center;"><div style="font-size:2em;font-weight:bold;color:#eb8f00;">0</div><div>Winter ascents</div></div></div>
+</div>
+<div id="sfooter">
+  <div class="footer-row">
+    <div class="footer-section">
+      <h3>29ers.com</h3>
+      <ul>
+        <li><a tabindex="0" href="about.html">About</a></li>
+        <li><a tabindex="0" href="support.html">Your Support</a></li>
+        <li><a tabindex="0" href="search.html">Search the Site</a></li>
+        <li><a tabindex="0" href="contact.html">Contact Site Admin</a></li>
+        <li><a tabindex="0" href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Creator</h3>
+      <ul>
+        <li><a tabindex="0" href="https://spencerboucher.com" rel="noopener"><span class="fas fa-globe"></span>&nbsp; Spencer Boucher</a></li>
+        <li><a tabindex="0" href="https://www.14ers.com" rel="noopener"><span class="fas fa-mountain-sun"></span>&nbsp; The original: 14ers.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Mission App</h3>
+      <ul>
+        <li><a tabindex="0" href="app.html">More info</a></li>
+        <li><a tabindex="0" href="https://mars.nasa.gov/" rel="noopener">NASA Mars Exploration</a></li>
+        <li><a tabindex="0" href="https://science.nasa.gov/dwarf-planets/vesta/" rel="noopener">NASA Vesta / Dawn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-row" style="margin-bottom:10px;">
+    <div class="copyright" style="line-height:1.6;">
+        <a tabindex="0" href="about.html">&copy; 2026 29ers.com<sup>&reg;</sup></a>, 29ers Inc.<br>
+        <span style="font-size:0.85em;opacity:0.85;">Not affiliated with 14ers.com or 14ers Inc. Imagery: NASA/JPL and Wikimedia (public domain / CC, credited per photo). Hero: Olympus Mons by ESA/DLR/FU Berlin (CC BY-SA 3.0 IGO).</span>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
