@@ -46,6 +46,10 @@ the site works offline apart from two web fonts: Roboto (Google Fonts) and Font 
   than hotlinked from 14ers.com
 - `images/site_logo.svg` — the 14ers logo recreated as "29ers.com" (Lilita One + eroded-edge filter)
 - `images/peaks/` — locally bundled, resized NASA/Wikimedia photos (public domain / CC, credited on-page)
+- `images/backgrounds/` — the rotating home hero (one picked per page load, like the original)
+- `images/home/` — the home page's own screenshots. Where 14ers.com shows off its map server,
+  dashboard, checklists and mobile app, 29ers.com shows the equivalent pages of *this* site,
+  captured with headless Chrome against a local server
 - `app.js` — sorting, tabs, mobile menu, read-more
 - `fonts/`, `build.py` — logo font + the data-driven page generator (`python3 build.py` rebuilds all pages)
 
@@ -54,4 +58,7 @@ the site works offline apart from two web fonts: Roboto (Google Fonts) and Font 
 This is a non-commercial parody / fan tribute. Not affiliated with 14ers.com or 14ers Inc.
 The mountains are real; the website is a joke. Image credits are shown on each peak page
 (NASA/JPL public domain except Mauna Kea © Vadim Kurland CC BY 2.0 and Everest © shrimpo1967/PLW2
-CC BY-SA 2.0). The homepage hero is Olympus Mons's western scarp by ESA/DLR/FU Berlin (CC BY-SA 3.0 IGO).
+CC BY-SA 2.0). The home page heroes are Olympus Mons's western scarp by ESA/DLR/FU Berlin
+(CC BY-SA 3.0 IGO) and two Curiosity views of Mount Sharp by NASA/JPL-Caltech/MSSS (public domain);
+the "3D flythrough" clip is a slow pan rendered from the scarp image. The Planning section's
+"29ersTopo" map is NASA/JPL-Caltech's annotated geology view of Mount Sharp (PIA23179).

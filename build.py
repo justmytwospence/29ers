@@ -353,14 +353,77 @@ The <strong>29ers</strong>: every mountain in the solar system that out-tops Mou
 
 page("peaks.html", "The Tallest Mountains in the Solar System | 29ers.com", LIST_CSS, index_body)
 
+# ---- Field Guide carousel: the 14ers.com "Mobile App" photoDial, showing our own pages ----
+# (page, header, caption) - header is blank on the first item, matching the real site.
+FIELD_GUIDE_ITEMS = [
+    ("peaks.html", "", "No other field guide is as focused on the 29ers as this one. AllTrails and Gaia GPS "
+     "will happily route you up Mauna Kea; for the other twelve you are on your own. It's free!"),
+    ("olympus-mons.html", "PEAKS", "Every peak gets elevation, relief, body, type, coordinates, discovery "
+     "history and a photo gallery shot by the spacecraft that found it."),
+    ("rheasilvia.html", "ROUTES", "One standard route per summit, graded on our extended class system. "
+     "Class 6: spacecraft and a pressure suit required."),
+    ("conditions.html", "CONDITIONS", "Current summit conditions across the solar system, grouped by body. "
+     "Uniformly hostile, updated never."),
+    ("weather.html", "WEATHER", "Summit forecasts for all 13, plus a dust storm tracker and a solar "
+     "conjunction warning for when the relay sats go quiet."),
+    ("routes.html", "PLANNING", "Filter all 13 by body, surface gravity, atmosphere and road access. "
+     "Exactly one peak has road access."),
+    ("checklists.html", "CHECKLISTS", "Tick off ascents, winter ascents and ski descents. Nobody has ticked "
+     "anything yet, so the leaderboard is wide open."),
+    ("forum.html", "COMMUNITY", "Route beta, trip planning, spacesuits and gear. Zero topics, zero posts, "
+     "and a seat at the table for whoever posts first."),
+    ("worlds.html", "THE WORLDS", "A primer on the seven worlds that host these mountains, from Marsology "
+     "to Vestology, including what each one will do to an unprotected climber."),
+]
+
+def field_guide():
+    items = "".join(
+        f'<a class="photoDial-item" href="{page_}" data-index="{i}" data-header="{hdr}" '
+        f'data-caption="{cap}" aria-label="{hdr or "Field Guide"}">'
+        f'<img class="photoDial-img" src="images/home/app{i+1}.jpg" alt="{hdr or "Field Guide"}" loading="lazy"></a>'
+        for i, (page_, hdr, cap) in enumerate(FIELD_GUIDE_ITEMS))
+    return f'''<div id="sectionMobileApps" class="homeSection">
+    <div class="sectionHeader" style="padding-left:0;">
+        <h2 style="width:100%;text-align:center;">Field Guide</h2>
+    </div>
+    <div style="width:100%;text-align:center;">
+        Heading off-world soon? Don't forget the <a href="peaks.html">29ers.com field guide</a>.<br>
+        <div id="mobileAppDialCaption" class="photoDial-caption" aria-live="polite">
+            <div class="photoDial-captionHeader" id="mobileAppDialCaptionHeader"></div>
+            <div class="photoDial-captionText" id="mobileAppDialCaptionText"></div>
+        </div>
+        <div id="mobileAppDial" class="photoDial" aria-roledescription="carousel">
+            <div class="photoDial-viewport">
+                <button type="button" class="photoDial-nav photoDial-prev" aria-label="Previous photo">&lsaquo;</button>
+                <div class="photoDial-track">{items}</div>
+                <button type="button" class="photoDial-nav photoDial-next" aria-label="Next photo">&rsaquo;</button>
+            </div>
+        </div>
+        <div id="mobileAppDialAttribution" class="photoDial-attribution">
+            &ldquo;AllTrails&rdquo; is a trademark of AllTrails, LLC. &ldquo;Gaia GPS&rdquo; is a trademark of
+            Outside Interactive, Inc. and TrailBehind Inc. All trademarks are the property of their respective
+            owners. None of them cover Mars, and neither does GPS. 29ers.com is not affiliated with these
+            companies, with 14ers.com, or with any planet.
+        </div>
+        <br>
+        <a href="peaks.html" class="buttonf orangef">Open the Field Guide</a>
+        <br>
+    </div>
+</div>'''
+
+FIELD_GUIDE = field_guide()
+
 # ============================ HOME PAGE (faithful clone of 14ers.com landing page) ============================
 home_body = '''<div id="wrap">
 
 <a id="top" accesskey="t"></a>
 
 <div id="dhtmlpoptip"></div>
-<div id="backimage-wrapper"></div>
-<main style="background:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,.55)), url(images/peaks/olympus-mons-hero.jpg) center/cover fixed no-repeat;" id="main">
+<div id="backimage-wrapper">
+<div id="backimage-caption"></div>
+<div id="backimage-buttons"><div id="backimage-pause" style="display:none;z-index:999999999999"><i class="far fa-pause-circle"></i></div><div id="backimage-resume" style="display:none;"><i class="far fa-play-circle"></i></div></div>
+</div>
+<main style="background:linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, .15)), url(images/backgrounds/mount-sharp.jpg);" id="main">
 
     <div id="mainFloatButtons">
         <div id="jumpRecentActivity" style="right:5px;z-index:1;margin-bottom:20px;" class="show-10"><a href="#recentActivityPanel" onclick="document.getElementById('recentActivityPanel').scrollIntoView({behavior:'smooth'});return false;" class="buttonf orangef" style="margin-right:0;background-color:#eb8f00;border:solid 1px #eb8f00;border-radius:4px;" title="Jump to Recent Activity"><i class="fa-solid fa-chart-simple"></i><span class="hide-4">&nbsp;&nbsp;Recent Activity</span></a></div>
@@ -368,8 +431,8 @@ home_body = '''<div id="wrap">
 
 <div id="sectionMain" class="homeSection  notLoggedIn">
 <h1>The Tallest Mountains in the Solar System</h1>
-<h2 class="helloText" style="font-size:1.4em;margin-top:0.5em;">Everything you need to plan, track and document your ascents of the solar system's highest peaks</h2>
-<h2 class="helloText" style="margin-top:0;font-size:1em;">Your field guide to the giants of the solar system &mdash; <a style="font-size:1em;color:yellow;" href="about.html">what's a 29er?</a></h2>
+<h2 class="helloText" style="font-size:1.4em;margin-top:0.5em;">Everything you need to plan<span class="hide-5">, track and document</span> your ascents of the solar system's highest peaks</h2>
+<h2 class="helloText" style="margin-top:0.5em;font-size:1em;">Every mountain in the solar system that out-tops Everest, in one place<span class="hide-5"> &mdash; and not one of them has ever been climbed. <a style="font-size:1em;color:yellow;" href="about.html">What's a 29er?</a></span></h2>
 <div style="width:100%;"></div>
 </div>
 
@@ -384,18 +447,25 @@ home_body = '''<div id="wrap">
     <br><br>
     <div class="sectionImage" style="padding-left:7px;">
         <div class="show-10" style="width:97%">
-            <img src="images/peaks/ascraeus-mons.jpg" alt="Ascraeus Mons" title="Mars from orbit" loading="lazy" style="width:100%;max-width:100%;height:auto;margin-bottom:10px;border-radius:6px;">
+            <img src="images/home/home_planningsection_map.jpg" alt="Maps" title="29ersTopo" loading="lazy"
+                 style="width:100%;max-width:100%;height:auto;margin-bottom:10px;">
         </div>
     </div>
-    Every peak page carries the elevation, body, type, coordinates, discovery, a photo gallery and a themed weather forecast.<br><a href="peaks.html" class="buttonf orangef">Explore the Peaks</a>
+    Every peak page carries the elevation, body, type, coordinates, discovery, a photo gallery and a themed weather forecast. And the Route Selection Tool will narrow all 13 by body, gravity, atmosphere and class.<br><a href="peaks.html" class="buttonf orangef">Explore the Peaks</a><span>
     <br><br>
-    New to interplanetary mountaineering?<br><a href="about.html" class="buttonf orangef">What are 29ers?</a>
+    New to interplanetary mountaineering?<br><a href="about.html" class="buttonf orangef">What are 29ers?</a></span>
+        <br><br>Nobody has posted a trip report yet, because nobody has been. Want to be the first?<br><a href="trip-reports.html" class="buttonf orangef">Trip Reports</a>
 </div>
 
 <div class="sectionImage largeDisplay">
-    <img src="images/peaks/maxwell-montes.jpg" alt="Maxwell Montes radar" title="Maxwell Montes (Venus)" loading="lazy" style="border-radius:6px;">
+    <img src="images/home/home_planningsection_map.jpg" alt="Maps" title="29ersTopo" loading="lazy">
+    <div class="videoCtaWrap">
+        <div class="videoReveal">
+            <video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback id="routeAnimation" title="3D Flythrough" src="images/home/scarp-flythrough.mp4"></video>
+        </div>
+    </div>
     <br>
-    <img class="planningBookmarks" src="images/peaks/olympus-mons-2.jpg" alt="Olympus Mons" title="Olympus Mons (Mars)" loading="lazy" style="border-radius:6px;">
+    <img class="planningBookmarks" src="images/home/home_planningsection.jpg" alt="Route Selection Tool" title="Route Selection Tool" loading="lazy">
 </div>
 
 </div>
@@ -404,12 +474,12 @@ home_body = '''<div id="wrap">
 <div id="sectionTracking" class="homeSection">
 <div class="sectionHeader"><h2>Track Your Progress</h2></div>
 <div class="sectionWrapper flex">
-<div class="sectionText">A peak checklist is an easy way to document your ascents. Tick off all 13 of the solar system's <strong>29ers</strong> &mdash; every peak that out-tops Everest &mdash; or just chase the two co-tallest, Olympus Mons and Rheasilvia.<br><br>Track winter<span class='far fa-snowflake ficon'></span> ascents, ski/snowboard<span class='fa-solid fa-person-skiing ficon'></span> descents (good luck on Io), repeats and solo climbs. Compare your list with a partner when planning the next expedition.
+<div class="sectionText">A peak checklist is an easy way to document your ascents, even if you never intend to finish the whole list.<br><br>For each 29er, track winter<span class='far fa-snowflake ficon'></span> ascents, ski/snowboard<span class='fa-solid fa-person-skiing ficon'></span> descents (good luck on Io), repeats and solo climbs.<br><br>Tick off all 13 <span class="showHide">&nbsp;<i class="fa-solid fa-arrow-right fa-beat" style="--fa-animation-duration: 2s;"></i></span><span class="showHide"><br></span>or just chase the two co-tallest, Olympus Mons and Rheasilvia, and compare your list with a partner when planning the next expedition.
 <br>
-<a href="peaks.html" class="buttonf orangef">The 29ers List</a><br><br>
+<a href="checklists.html" class="buttonf orangef">Checklists</a><br><br>
 </div>
 <div class="sectionImage largeDisplay">
-<img src="images/peaks/rheasilvia.jpg" alt="Vesta" title="Rheasilvia (Vesta)" loading="lazy" style="border-radius:6px;">
+<img src="images/home/home_checklistsection.jpg" alt="Checklist" title="Checklist" loading="lazy">
 </div>
 </div>
 </div>
@@ -419,22 +489,13 @@ home_body = '''<div id="wrap">
     <div class="sectionHeader"><h2>Living History and Community</h2></div>
     <div class="sectionWrapper flex">
         <div class="sectionText" style="width:100%;max-width:100%;">Every one of these summits was mapped by robotic explorers &mdash; Mariner, Viking, Voyager, Pioneer, Magellan, Galileo, Cassini and Dawn &mdash; and not one of them has ever been climbed. The first ascents are still out there, waiting.
-            <div style="width:100%;height:55px;"><a href="peaks.html" class="buttonf orangef">Browse Peaks</a></div>
-            Recorded summits so far, by humans or robots: <strong>zero</strong>. Be the first. Whether your future rope team forms on Mars, Io, or a moon of Saturn, the biggest mountains in existence aren't going anywhere.
+            <div style="width:100%;height:55px;"><a href="trip-reports.html" class="buttonf orangef">Trip Reports</a></div>
+            Recorded summits so far, by humans or robots: <strong>zero</strong>. Every route on this site is a first ascent waiting to happen, and the beta is thin because there isn't any. Whether your future rope team forms on Mars, Io, or a moon of Saturn, the biggest mountains in existence aren't going anywhere. Compare notes in the <a href="forum.html">29ers.com Forum</a>, or go climb something closer to home with <a href="https://www.14ers.com" rel="noopener">the original 14ers.com</a>.
         </div>
     </div>
 </div>
 
-<div id="sectionMobileApps" class="homeSection">
-    <div class="sectionHeader" style="padding-left:0;"><h2 style="width:100%;text-align:center;">Field Guide</h2></div>
-    <div style="width:100%;text-align:center;">
-        Heading off-world soon? Every peak page packs the stats, imagery, conditions and routes you'll want in the field.<br><br>
-        <img src="images/peaks/ionian-mons.jpg" alt="Io" title="Io, home of three of the tallest mountains" loading="lazy" style="max-width:90%;border-radius:8px;">
-        <br><br>
-        <a href="peaks.html" class="buttonf orangef">Open the Field Guide</a>
-        <br>
-    </div>
-</div>
+''' + FIELD_GUIDE + '''
 
 <div id="sectionSupport" class="homeSection">
 <div class="sectionHeader" style="padding-left:0;"><h2 style="width:100%;text-align:center;">About this site</h2></div>
@@ -476,6 +537,7 @@ home_body = '''<div id="wrap">
         </div>
 </div>
 
+<div id="spacerBar" class="homeSection"></div>
 <div class="push"></div>
 </div>'''
 

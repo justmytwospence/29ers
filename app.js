@@ -52,9 +52,78 @@ function sortPeaks() {
   cards.forEach(function (c) { cont.appendChild(c); });
 }
 
+/* Home hero: pick one of the backgrounds per page load, like the real site does server-side */
+var HERO_BACKGROUNDS = [
+  'images/backgrounds/olympus-scarp.jpg',
+  'images/backgrounds/mount-sharp.jpg',
+  'images/backgrounds/gale-vista.jpg'
+];
+
+function pickHeroBackground() {
+  var main = document.getElementById('main');
+  if (!main || !main.style.background) return;
+  var pick = HERO_BACKGROUNDS[Math.floor(Math.random() * HERO_BACKGROUNDS.length)];
+  main.style.background = 'linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, .15)), url(' + pick + ')';
+}
+
+/* Field Guide carousel: 3D dial of phone-sized screenshots.
+   Positions are classes (is-center, is-left-1..3, is-right-1..3) that homeindex_main.css
+   turns into the scaled/offset transforms; we only decide which item gets which class. */
+function initFieldGuideDial() {
+  var root = document.getElementById('mobileAppDial');
+  if (!root) return;
+  var items = Array.prototype.slice.call(root.querySelectorAll('.photoDial-item'));
+  if (!items.length) return;
+  var attribution = document.getElementById('mobileAppDialAttribution');
+  var headerEl = document.getElementById('mobileAppDialCaptionHeader');
+  var textEl = document.getElementById('mobileAppDialCaptionText');
+  var active = 0;
+
+  function render() {
+    var len = items.length;
+    active = ((active % len) + len) % len;
+    items.forEach(function (item, i) {
+      var delta = i - active;
+      if (delta > len / 2) delta -= len;
+      if (delta < -len / 2) delta += len;
+      item.className = 'photoDial-item';
+      if (delta === 0) item.classList.add('is-center');
+      else if (Math.abs(delta) <= 3) {
+        item.classList.add('is-' + (delta < 0 ? 'left' : 'right') + '-' + Math.abs(delta));
+      }
+    });
+    if (headerEl) headerEl.textContent = items[active].dataset.header || '';
+    if (textEl) textEl.textContent = items[active].dataset.caption || '';
+    if (attribution) attribution.style.display = active === 0 ? '' : 'none';
+  }
+
+  function go(step) { active += step; render(); }
+
+  var prev = root.querySelector('.photoDial-prev');
+  var next = root.querySelector('.photoDial-next');
+  if (prev) prev.addEventListener('click', function (e) { e.preventDefault(); go(-1); });
+  if (next) next.addEventListener('click', function (e) { e.preventDefault(); go(1); });
+
+  /* Clicking a side item centers it rather than following its link */
+  items.forEach(function (item, i) {
+    item.addEventListener('click', function (e) {
+      if (!item.classList.contains('is-center')) {
+        e.preventDefault();
+        active = i;
+        render();
+      }
+    });
+  });
+
+  render();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var sel = document.getElementById('sort');
   if (sel) sel.addEventListener('change', sortPeaks);
+
+  pickHeroBackground();
+  initFieldGuideDial();
 
   /* Deep-link straight to the Weather tab via #weather */
   if (window.location.hash === '#weather' && document.getElementById('tab5-content')) {
