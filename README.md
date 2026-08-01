@@ -12,19 +12,25 @@ through Earth's own Hawaiian giants **Mauna Kea** and **Mauna Loa**. The lone ex
 Everest**: the world's most famous peak makes the list only on its 29,032 ft *above sea level* —
 measured base-to-peak like everything else it falls well short, so it carries an asterisk.
 
-## View it
+## Live
+
+**https://29ers.vercel.app**
+
+## Run it locally
 
 The CSS uses root-relative asset paths, so serve from this folder:
 
 ```
 cd 29ers
-python3 -m http.server 8084
-# open http://localhost:8084/
+python3 -m http.server 8029
+# open http://localhost:8029/
 ```
 
-Peak photos are bundled locally (`images/peaks/`), so the page itself works offline. An
-**internet connection** is still needed for the shared 14ers.com CSS, the Roboto font, and Font
-Awesome, which are loaded from the live sites.
+Everything is self-hosted — peak photos, stylesheets and site chrome all live in this repo — so
+the site works offline apart from two web fonts: Roboto (Google Fonts) and Font Awesome (cdnjs).
+
+`python3 build.py` regenerates every page from the peak data at the top of the script. Edit
+`build.py`, never the generated `*.html`.
 
 ## Files
 
@@ -34,7 +40,10 @@ Awesome, which are loaded from the live sites.
 - `<peak>.html` — a detail page per peak (olympus-mons, rheasilvia, iapetus-ridge, boosaule-montes,
   ascraeus-mons, ionian-mons, elysium-mons, arsia-mons, maxwell-montes, euboea-montes, mauna-kea, mauna-loa,
   mount-everest) — stats sidebar, photos, routes, weather, and a per-body history section
-- `css/` — 14ers.com's actual stylesheets (asset refs rewritten to absolute hotlinks)
+- `css/` — 14ers.com's stylesheets, kept as-is except for asset paths repointed at `images/vendor/`
+- `css/29ers.css` — the handful of rules this parody adds on top of them
+- `images/vendor/` — the site-chrome images those stylesheets reference, served locally rather
+  than hotlinked from 14ers.com
 - `images/site_logo.svg` — the 14ers logo recreated as "29ers.com" (Lilita One + eroded-edge filter)
 - `images/peaks/` — locally bundled, resized NASA/Wikimedia photos (public domain / CC, credited on-page)
 - `app.js` — sorting, tabs, mobile menu, read-more
